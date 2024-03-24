@@ -10,7 +10,8 @@
         "laravel/tinker": "^2.9",
         "filament/filament": "*",
         "bezhansalleh/filament-shield": "*",
-        "jeffgreco13/filament-breezy": "*"
+        "jeffgreco13/filament-breezy": "*",
+        "stechstudio/filament-impersonate": "*"
     },
     "repositories": [
         {
@@ -24,9 +25,15 @@
         {
             "type": "path",
             "url": "filament-breezy/src/*"
+        },
+        {
+            "type": "path",
+            "url": "filament-impersonate/src/*"
         }
     ],
     "require-dev": {
+        "roave/security-advisories": "dev-latest"
+        ,
         "fakerphp/faker": "^1.23",
         "laravel/pint": "^1.13",
         "laravel/sail": "^1.26",

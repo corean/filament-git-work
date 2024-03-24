@@ -18,6 +18,7 @@ use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Jeffgreco13\FilamentBreezy\BreezyCore;
+use STS\FilamentImpersonate\Tables\Actions\Impersonate;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -61,7 +62,8 @@ class AdminPanelProvider extends PanelProvider
                     )
                     ->enableTwoFactorAuthentication(
                         force: false, // force the user to enable 2FA before they can use the application (default = false)
-                    )
+                    ),
+                Impersonate::make(),
             )
             ->authMiddleware([
                 Authenticate::class,
