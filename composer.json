@@ -8,12 +8,17 @@
         "php": "^8.2",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
-        "filament/filament": "*"
+        "filament/filament": "*",
+        "bezhansalleh/filament-shield": "*"
     },
     "repositories": [
         {
             "type": "path",
             "url": "filament/packages/*"
+        },
+        {
+            "type": "path",
+            "url": "filament-shield/src/*"
         }
     ],
     "require-dev": {
