@@ -12,7 +12,8 @@
         "bezhansalleh/filament-shield": "*",
         "jeffgreco13/filament-breezy": "*",
         "stechstudio/filament-impersonate": "*",
-        "shuvroroy/filament-spatie-laravel-backup": "*"
+        "shuvroroy/filament-spatie-laravel-backup": "*",
+        "tapp/filament-auditing": "*"
     },
     "repositories": [
         {
@@ -34,6 +35,10 @@
         {
             "type": "path",
             "url": "filament-spatie-laravel-backup/src/*"
+        },
+        {
+            "type": "path",
+            "url": "filament-auditing/src/*"
         }
     ],
     "require-dev": {
