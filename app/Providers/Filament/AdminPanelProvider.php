@@ -17,6 +17,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Jeffgreco13\FilamentBreezy\BreezyCore;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -51,6 +52,17 @@ class AdminPanelProvider extends PanelProvider
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
             ])
+            ->plugin(
+                BreezyCore::make()
+                    ->myProfile(
+                        hasAvatars: true,          // Sets the navigation group for the My Profile page (default = null)
+                        slug: 'my-profile',         // Enables the avatar upload form component (default = false)
+                        navigationGroup: 'Settings' // Sets the slug for the profile page (default = 'my-profile')
+                    )
+                    ->enableTwoFactorAuthentication(
+                        force: false, // force the user to enable 2FA before they can use the application (default = false)
+                    )
+            )
             ->authMiddleware([
                 Authenticate::class,
             ]);
