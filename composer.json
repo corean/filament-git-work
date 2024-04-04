@@ -6,11 +6,12 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "bezhansalleh/filament-shield": "*",
+        "filament/filament": "*",
+        "jeffgreco13/filament-breezy": "*",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
-        "filament/filament": "*",
-        "bezhansalleh/filament-shield": "*",
-        "jeffgreco13/filament-breezy": "*",
+        "spatie/laravel-backup": "^8.6",
         "stechstudio/filament-impersonate": "*"
     },
     "repositories": [
@@ -29,6 +30,14 @@
         {
             "type": "path",
             "url": "filament-impersonate/src/*"
+        },
+        {
+            "type": "path",
+            "url": "laravel-backup/src/*"
+        },
+        {
+            "type": "path",
+            "url": "laravel-comments/src/*"
         }
     ],
     "require-dev": {
